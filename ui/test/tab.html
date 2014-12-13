@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <link href="../tab.css" rel="stylesheet">
+	    <script src="../../lib/jquery.1.7.1.js"></script>		
+		<script src="../tab.js"></script>
+	</head>
+    <body  >
+	    
+	    <div  id="dp1"></div>
+        
+		<script>
+		    $(function(){
+			    $('#dp1').tab({
+				    items: [
+					    {title: 'titlea', content: 'content a'},
+	                    {title: 'titleb', content: 'content b'},
+						{title: 'titlec', content: 'content c'}
+					],
+					index: 2,
+					ev: 'click'
+			    }).select(1);
+				$('#dp1').on('select', function(e){
+				    console.log(e.index)
+				});
+			})
+		</script>
+		
+	</body>
+</html>
